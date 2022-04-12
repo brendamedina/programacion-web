@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executing a Function on Change Event in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("select").change(function(){
+        var str = "";
+        $("select option:selected").each(function(){
+          str += $ (this).text() + " ";
+        });
+		$("div").text(str);
+    })
+  	.change();
+});
+</script>
+</head>
+<body>
+	City:
+  <select multiple="multiple">
+     <option>London</option>
+     <option selected="selected">Paris</option>
+     <option>New York</option>
+     <option selected="selected">Cancun</option>
+  </select>
+  <div></div>
+
+</body>
+</html>
