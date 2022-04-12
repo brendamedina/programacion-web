@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <p class="sign">Sign up</p>
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="user-name" onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Age</label>
+        <input type="tel" placeholder="Enter your age" id="user-age" onkeyup="validateAge()">
+        <span id="age-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone</label>
+        <input type="tel" placeholder="1234567890" id="user-phone" onkeyup="validatePhone()">
+        <span id="phone-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email" id="user-email" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+      </div>
+      
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" id="user-password" onkeyup="validatePassword()">
+        <span id="password-error"></span>
+      </div>
+
+    <button onclick="return validateForm()">Submit</button>
+    <span id="submit-error"></span>
+
+  </form>
+  
+  </div>
+  <script src="script.js"></script> 
+</body>
+</html>
